@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="stats"></div>
+    <script>
+
+        window.addEventListener('deviceorientation', function (event) {
+            let alpha = event.alpha;
+            let beta = event.beta;
+            let gamma = event.gamma;
+            const statsDiv = document.getElementById("stats");
+            console.log(statsDiv);
+            let butt = document.createElement("h1");
+            butt.innerText ="Alpha: " + alpha + " \n Beta: " + beta + " \n Gamma: " + gamma;
+            statsDiv.appendChild(butt);
+        });
+    </script>
+</body>
+
+</html>
